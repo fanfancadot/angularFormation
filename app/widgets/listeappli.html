@@ -1,0 +1,16 @@
+<table class= "table table-striped">
+    <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Mail</th>
+        <th>Téléphone</th>
+        <th>Montant</th>
+    </tr>
+    <tr ng-repeat="personne in personnes | orderBy:'nom'">
+        <td>{{personne.nom | makeUppercase}}</td>
+        <td>{{personne.prenom}}</td>
+        <td>{{personne.mail}}</td>
+        <td>{{personne.telephone}}</td>
+        <td>{{personne.montant | currency:"USD$"}}</td>
+    </tr>      
+</table>
